@@ -25,9 +25,9 @@ class Movie {
 
   // ------------------------------ CONSTRUCTOR ------------------------------
 
-  function __construct($original_title, $release_year) {
-    $this->original_title = $original_title;
-    $this->release_year = $release_year;
+  function __construct($_original_title, $_release_year) {
+    $this->original_title = $_original_title;
+    $this->release_year = $_release_year;
   }
 
   // ------------------------------ METHODS ------------------------------
@@ -94,11 +94,127 @@ $suicide_squad_2 = new Movie('Suicide Squad 2', 2021);
   <body>
     <div id="page-wrapper">
       <div class="container">
-        <h1>prova titolo</h1>
-        <h2>prova sottotitolo</h2>
-        <?php
-        echo('prova');
-        ?>
+        <h1>MOVIE DATABASE</h1>
+        <h2>Movies list</h2>
+        <ul>
+          <!-- Inception -->
+          <li>
+            <h3>
+              <?php
+              echo($inception->original_title);
+              ?>
+            </h3>
+            <p>Director:
+              <span>
+                <?php
+                echo($inception->director);
+                ?>
+              </span>
+            </p>
+            <p>Release Year:
+              <span>
+                <?php
+                echo($inception->release_year);
+                ?>
+              </span>
+            </p>
+            <p>New Release:
+              <span>
+                <?php
+                // setNewRelease($inception->release_year);
+                echo($inception->new_release);
+                ?>
+              </span>
+            </p>
+          </li>
+          <!-- Dead Poets Society -->
+          <li>
+            <h3>
+              <?php
+              echo($dead_poets_society->original_title);
+              ?>
+            </h3>
+            <p>Director:
+              <span>
+                <?php
+                echo($dead_poets_society->director);
+                ?>
+              </span>
+            </p>
+            <p>Release Year:
+              <span>
+                <?php
+                echo($dead_poets_society->release_year);
+                ?>
+              </span>
+            </p>
+            <p>New Release:
+              <span>
+                <?php
+                echo($dead_poets_society->new_release);
+                ?>
+              </span>
+            </p>
+          </li>
+          <!-- The Last Samurai -->
+          <li>
+            <h3>
+              <?php
+              echo($the_last_samurai->original_title);
+              ?>
+            </h3>
+            <p>Director:
+              <span>
+                <?php
+                echo($the_last_samurai->director);
+                ?>
+              </span>
+            </p>
+            <p>Release Year:
+              <span>
+                <?php
+                echo($the_last_samurai->release_year);
+                ?>
+              </span>
+            </p>
+            <p>New Release:
+              <span>
+                <?php
+                echo($the_last_samurai->new_release);
+                ?>
+              </span>
+            </p>
+          </li>
+          <!-- Suicide Squad 2 -->
+          <li>
+            <h3>
+              <?php
+              echo($suicide_squad_2->original_title);
+              ?>
+            </h3>
+            <p>Director:
+              <span>
+                <?php
+                echo($suicide_squad_2->director);
+                ?>
+              </span>
+            </p>
+            <p>Release Year:
+              <span>
+                <?php
+                echo($suicide_squad_2->release_year);
+                ?>
+              </span>
+            </p>
+            <p>New Release:
+              <span>
+                <?php
+                echo($suicide_squad_2->new_release);
+                ?>
+              </span>
+            </p>
+          </li>
+        </ul>
       </div>
     </div>
   </body>
