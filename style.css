@@ -12,18 +12,18 @@ h1 {
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 1.5px;
-  color: blue;
-  text-shadow: 3px 3px #D8CEF6;
-  padding: 60px 0;
+  color: #0404B4;
+  text-shadow: 3px 3px #CEE3F6;
+  padding: 30px 0;
   font-size: 30px;
 }
 
 h2 {
   font-weight: 800;
-  padding: 30px 0;
+  padding: 20px 0;
   font-size: 30px;
-  color: #D8CEF6;
-  text-shadow: 3px 3px blue;
+  color: #CEE3F6;
+  text-shadow: 3px 3px #0404B4;
   text-transform: capitalize;
 }
 
@@ -40,11 +40,11 @@ ul {
 }
 
 li {
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 span {
-  color: blue;
+  color: #0040FF;
 }
 
 #page-wrapper {
@@ -57,6 +57,7 @@ span {
 
 .container {
   margin: 0 auto;
+  padding: 30px 0;
 }
 
 /* Sections */
@@ -78,10 +79,38 @@ h1::after {
   font-size: 30px;
 }
 
-p.release-info {
+.cards-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.movie-card {
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 280px;
+ border: 3px solid #5882FA;
+ box-shadow: inset 0px 0px 20px #81BEF7;
+ border-radius: 10px;
+ margin-top: 40px;
+ padding: 10px 20px;
+}
+
+.movie-card > ul.movie-info {
+  padding: 10px 0;
+}
+
+li.vote span {
+  color: #DF7401;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+li.release-info {
   padding: 5px 0;
   color: red;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 14px;
   text-transform: uppercase;
 }
