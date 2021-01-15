@@ -15,7 +15,7 @@ h1 {
   color: blue;
   text-shadow: 3px 3px #D8CEF6;
   padding: 60px 0;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 h2 {
@@ -63,19 +63,27 @@ span {
 
 h1::before {
   content: '\f008';
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 h1::after {
   content: '\f008';
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 h1::before,
 h1::after {
   font-family: "Font Awesome 5 Free";
   font-weight: 700;
-  font-size: 40px;
+  font-size: 30px;
+}
+
+p.release-info {
+  padding: 5px 0;
+  color: red;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 /* ------------------- MEDIA QUERY ------------------- */

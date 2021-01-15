@@ -8,6 +8,9 @@
   e stampati a schermo i valori delle relative proprietà
 */
 
+// VARIABLES & CONSTANTS INITIALIZATION
+$current_year = 2021;
+
 // CLASS CREATION
 class Movie {
   // INSTANCE VARIABLES INTIALIZATION
@@ -38,9 +41,9 @@ class Movie {
   }
 
   // SETTER FUNCTION
-  public function setNewRelease($release_year) {
-    $current_year = 2021;
-    if($release_year >= $current_year) {
+  public function setNewRelease($release_year, $this_year) {
+    $this_year = $current_year;
+    if($release_year >= $this_year) {
       $this->new_release = true;
     } else {
       $this->new_release = false;
@@ -118,13 +121,12 @@ $suicide_squad_2 = new Movie('Suicide Squad 2', 2021);
                 ?>
               </span>
             </p>
-            <p>New Release:
-              <span>
-                <?php
-                // setNewRelease($inception->release_year);
-                echo($inception->new_release);
-                ?>
-              </span>
+            <p class="release-info">
+              <?php
+                if ($inception->release_year >= $current_year) {
+                  echo('New Release!');
+                }
+              ?>
             </p>
           </li>
           <!-- Dead Poets Society -->
@@ -148,12 +150,12 @@ $suicide_squad_2 = new Movie('Suicide Squad 2', 2021);
                 ?>
               </span>
             </p>
-            <p>New Release:
-              <span>
-                <?php
-                echo($dead_poets_society->new_release);
-                ?>
-              </span>
+            <p class="release-info">
+              <?php
+                if ($dead_poets_society->release_year >= $current_year) {
+                  echo('New Release!');
+                }
+              ?>
             </p>
           </li>
           <!-- The Last Samurai -->
@@ -177,12 +179,12 @@ $suicide_squad_2 = new Movie('Suicide Squad 2', 2021);
                 ?>
               </span>
             </p>
-            <p>New Release:
-              <span>
-                <?php
-                echo($the_last_samurai->new_release);
-                ?>
-              </span>
+            <p class="release-info">
+              <?php
+                if ($the_last_samurai->release_year >= $current_year) {
+                  echo('New Release!');
+                }
+              ?>
             </p>
           </li>
           <!-- Suicide Squad 2 -->
@@ -206,12 +208,12 @@ $suicide_squad_2 = new Movie('Suicide Squad 2', 2021);
                 ?>
               </span>
             </p>
-            <p>New Release:
-              <span>
-                <?php
-                echo($suicide_squad_2->new_release);
-                ?>
-              </span>
+            <p class="release-info">
+              <?php
+                if ($suicide_squad_2->release_year >= $current_year) {
+                  echo('New Release!');
+                }
+              ?>
             </p>
           </li>
         </ul>
