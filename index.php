@@ -106,19 +106,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="action.js" charset="utf-8"></script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div id="page-wrapper">
       <div class="container">
-        <h1>MOVIE DATABASE</h1>
+        <h1>MOVIES DATABASE</h1>
         <h2>Movies list</h2>
         <div class="cards-wrapper">
           <!-- Inception -->
           <div class="movie-card">
             <h3>
               <?php
-              echo($inception->original_title);
+                echo($inception->original_title);
               ?>
             </h3>
             <ul class="movie-info">
@@ -126,7 +128,7 @@
                 Italian title:
                 <span>
                   <?php
-                  echo($inception->italian_title);
+                    echo($inception->italian_title);
                   ?>
                 </span>
               </li>
@@ -134,7 +136,7 @@
                 Director:
                 <span>
                   <?php
-                  echo($inception->director);
+                    echo($inception->director);
                   ?>
                 </span>
               </li>
@@ -142,7 +144,7 @@
                 Release Year:
                 <span>
                   <?php
-                  echo($inception->release_year);
+                    echo($inception->release_year);
                   ?>
                 </span>
               </li>
@@ -150,28 +152,46 @@
                 Vote:
                 <span>
                   <?php
-                  if ($inception->vote) {
-                    echo($inception->vote);
-                  } else {
-                    echo('n/a');
-                  }
+                    if ($inception->vote) {
+                      echo($inception->vote);
+                    } else {
+                      echo('n/a');
+                    }
                   ?>
                 </span>
               </li>
-              <li class="release-info">
-                <?php
-                if ($inception->new_release) {
-                  echo('New release!');
-                }
-                ?>
+              <li class="plot">
+                <span class="show">Read plot</span>
+                <span class="hide">Read less</span>
+                <div class="plot-text">
+                  <?php
+                    if ($inception->plot) {
+                      echo($inception->plot);
+                    } else { ?>
+                        <p class="text-center">
+                          Plot:
+                          <span>n/a</span>
+                        </p>
+                      <?php
+                    }
+                  ?>
+                </div>
               </li>
+              <?php
+                if ($inception->new_release) { ?>
+                  <li class="release-info">
+                    <?php echo('New release!'); ?>
+                  </li>
+                  <?php
+                }
+              ?>
             </ul>
           </div>
           <!-- Suicide Squad 2 -->
           <div class="movie-card">
             <h3>
               <?php
-              echo($suicide_squad_2->original_title);
+                echo($suicide_squad_2->original_title);
               ?>
             </h3>
             <ul class="movie-info">
@@ -179,7 +199,7 @@
                 Italian title:
                 <span>
                   <?php
-                  echo($suicide_squad_2->italian_title);
+                    echo($suicide_squad_2->italian_title);
                   ?>
                 </span>
               </li>
@@ -187,7 +207,7 @@
                 Director:
                 <span>
                   <?php
-                  echo($suicide_squad_2->director);
+                    echo($suicide_squad_2->director);
                   ?>
                 </span>
               </li>
@@ -195,7 +215,7 @@
                 Release Year:
                 <span>
                   <?php
-                  echo($suicide_squad_2->release_year);
+                    echo($suicide_squad_2->release_year);
                   ?>
                 </span>
               </li>
@@ -203,28 +223,46 @@
                 Vote:
                 <span>
                   <?php
-                  if ($suicide_squad_2->vote) {
-                    echo($suicide_squad_2->vote);
-                  } else {
-                    echo('n/a');
-                  }
+                    if ($suicide_squad_2->vote) {
+                      echo($suicide_squad_2->vote);
+                    } else {
+                      echo('n/a');
+                    }
                   ?>
                 </span>
               </li>
-              <li class="release-info">
-                <?php
-                if ($suicide_squad_2->new_release) {
-                  echo('New release!');
-                }
-                ?>
+              <li class="plot">
+                <span class="show">Read plot</span>
+                <span class="hide">Read less</span>
+                <div class="plot-text">
+                  <?php
+                    if ($suicide_squad_2->plot) {
+                      echo($suicide_squad_2->plot);
+                    } else { ?>
+                        <p class="text-center">
+                          Plot:
+                          <span>n/a</span>
+                        </p>
+                      <?php
+                    }
+                  ?>
+                </div>
               </li>
+              <?php
+                if ($suicide_squad_2->new_release) { ?>
+                  <li class="release-info">
+                    <?php echo('New release!'); ?>
+                  </li>
+                  <?php
+                }
+              ?>
             </ul>
           </div>
           <!-- Dead Poets Society -->
           <div class="movie-card">
             <h3>
               <?php
-              echo($dead_poets_society->original_title);
+                echo($dead_poets_society->original_title);
               ?>
             </h3>
             <ul class="movie-info">
@@ -232,7 +270,7 @@
                 Italian title:
                 <span>
                   <?php
-                  echo($dead_poets_society->italian_title);
+                    echo($dead_poets_society->italian_title);
                   ?>
                 </span>
               </li>
@@ -240,7 +278,7 @@
                 Director:
                 <span>
                   <?php
-                  echo($dead_poets_society->director);
+                    echo($dead_poets_society->director);
                   ?>
                 </span>
               </li>
@@ -248,7 +286,7 @@
                 Release Year:
                 <span>
                   <?php
-                  echo($dead_poets_society->release_year);
+                    echo($dead_poets_society->release_year);
                   ?>
                 </span>
               </li>
@@ -256,28 +294,46 @@
                 Vote:
                 <span>
                   <?php
-                  if ($dead_poets_society->vote) {
-                    echo($dead_poets_society->vote);
-                  } else {
-                    echo('n/a');
-                  }
+                    if ($dead_poets_society->vote) {
+                      echo($dead_poets_society->vote);
+                    } else {
+                      echo('n/a');
+                    }
                   ?>
                 </span>
               </li>
-              <li class="release-info">
-                <?php
-                if ($dead_poets_society->new_release) {
-                  echo('New release!');
-                }
-                ?>
+              <li class="plot">
+                <span class="show">Read plot</span>
+                <span class="hide">Read less</span>
+                <div class="plot-text">
+                  <?php
+                    if ($dead_poets_society->plot) {
+                      echo($dead_poets_society->plot);
+                    } else { ?>
+                        <p class="text-center">
+                          Plot:
+                          <span>n/a</span>
+                        </p>
+                      <?php
+                    }
+                  ?>
+                </div>
               </li>
+              <?php
+                if ($dead_poets_society->new_release) { ?>
+                  <li class="release-info">
+                    <?php echo('New release!'); ?>
+                  </li>
+                  <?php
+                }
+              ?>
             </ul>
           </div>
           <!-- The Last Samurai -->
           <div class="movie-card">
             <h3>
               <?php
-              echo($the_last_samurai->original_title);
+                echo($the_last_samurai->original_title);
               ?>
             </h3>
             <ul class="movie-info">
@@ -285,7 +341,7 @@
                 Italian title:
                 <span>
                   <?php
-                  echo($the_last_samurai->italian_title);
+                    echo($the_last_samurai->italian_title);
                   ?>
                 </span>
               </li>
@@ -293,7 +349,7 @@
                 Director:
                 <span>
                   <?php
-                  echo($the_last_samurai->director);
+                    echo($the_last_samurai->director);
                   ?>
                 </span>
               </li>
@@ -301,7 +357,7 @@
                 Release Year:
                 <span>
                   <?php
-                  echo($the_last_samurai->release_year);
+                    echo($the_last_samurai->release_year);
                   ?>
                 </span>
               </li>
@@ -309,28 +365,46 @@
                 Vote:
                 <span>
                   <?php
-                  if ($the_last_samurai->vote) {
-                    echo($the_last_samurai->vote);
-                  } else {
-                    echo('n/a');
-                  }
+                    if ($the_last_samurai->vote) {
+                      echo($the_last_samurai->vote);
+                    } else {
+                      echo('n/a');
+                    }
                   ?>
                 </span>
               </li>
-              <li class="release-info">
-                <?php
-                if ($the_last_samurai->new_release) {
-                  echo('New release!');
-                }
-                ?>
+              <li class="plot">
+                <span class="show">Read plot</span>
+                <span class="hide">Read less</span>
+                <div class="plot-text">
+                  <?php
+                    if ($the_last_samurai->plot) {
+                      echo($the_last_samurai->plot);
+                    } else { ?>
+                        <p class="text-center">
+                          Plot:
+                          <span>n/a</span>
+                        </p>
+                      <?php
+                    }
+                  ?>
+                </div>
               </li>
+              <?php
+                if ($the_last_samurai->new_release) { ?>
+                  <li class="release-info">
+                    <?php echo('New release!'); ?>
+                  </li>
+                  <?php
+                }
+              ?>
             </ul>
           </div>
           <!-- Cinderella -->
           <div class="movie-card">
             <h3>
               <?php
-              echo($cinderella->original_title);
+                echo($cinderella->original_title);
               ?>
             </h3>
             <ul class="movie-info">
@@ -338,7 +412,7 @@
                 Italian title:
                 <span>
                   <?php
-                  echo($cinderella->italian_title);
+                    echo($cinderella->italian_title);
                   ?>
                 </span>
               </li>
@@ -346,7 +420,7 @@
                 Director:
                 <span>
                   <?php
-                  echo($cinderella->director);
+                    echo($cinderella->director);
                   ?>
                 </span>
               </li>
@@ -354,7 +428,7 @@
                 Release Year:
                 <span>
                   <?php
-                  echo($cinderella->release_year);
+                    echo($cinderella->release_year);
                   ?>
                 </span>
               </li>
@@ -362,21 +436,39 @@
                 Vote:
                 <span>
                   <?php
-                  if ($cinderella->vote) {
-                    echo($cinderella->vote);
-                  } else {
-                    echo('n/a');
-                  }
+                    if ($cinderella->vote) {
+                      echo($cinderella->vote);
+                    } else {
+                      echo('n/a');
+                    }
                   ?>
                 </span>
               </li>
-              <li class="release-info">
-                <?php
-                if ($cinderella->new_release) {
-                  echo('New release!');
-                }
-                ?>
+              <li class="plot">
+                <span class="show">Read plot</span>
+                <span class="hide">Read less</span>
+                <div class="plot-text">
+                  <?php
+                    if ($cinderella->plot) {
+                      echo($cinderella->plot);
+                    } else { ?>
+                        <p class="text-center">
+                          Plot:
+                          <span>n/a</span>
+                        </p>
+                      <?php
+                    }
+                  ?>
+                </div>
               </li>
+              <?php
+                if ($cinderella->new_release) { ?>
+                  <li class="release-info">
+                    <?php echo('New release!'); ?>
+                  </li>
+                  <?php
+                }
+              ?>
             </ul>
           </div>
         </div> <!-- Closing cards-wrapper -->

@@ -60,6 +60,18 @@ span {
   padding: 30px 0;
 }
 
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
 /* Sections */
 
 h1::before {
@@ -89,7 +101,7 @@ h1::after {
 .movie-card {
   min-width: 300px;
   max-width: 300px;
-  min-height: 280px;
+  min-height: 320px;
  border: 3px solid #5882FA;
  box-shadow: inset 0px 0px 20px #81BEF7;
  border-radius: 10px;
@@ -101,10 +113,64 @@ h1::after {
   padding: 10px 0;
 }
 
+li.vote {
+  padding: 10px 0;
+}
+
 li.vote span {
   color: #DF7401;
   font-weight: 800;
   font-size: 18px;
+}
+
+li.plot {
+  padding-bottom: 10px;
+}
+
+li.plot > span {
+  color: #000;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.20s;
+}
+
+li.plot > span:hover {
+  color: red;
+}
+
+li.plot > span::before,
+li.plot > span::after {
+  font-weight: bold;
+  font-size: 16px;
+  color: red;
+}
+
+li.plot > span::before {
+  content: "\2192";
+  margin-right: 5px;
+}
+
+li.plot > span::after {
+  content: "\2190";
+  margin-left: 5px;
+}
+
+li.plot .plot-text {
+  text-align: justify;
+  font-size: 14px;
+  display: none;
+  padding-top: 10px;
+}
+
+li.plot .plot-text.active {
+  display: block;
+}
+
+.plot-text > p > span {
+  color: #DF7401;
+  font-weight: 800;
 }
 
 li.release-info {
